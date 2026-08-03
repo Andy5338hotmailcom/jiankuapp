@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>简库资源网下载</title>
+    <title>版本下载</title>
     <style>
         * {
             margin: 0;
@@ -11,32 +11,81 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #F3F3FB;
+            font-family: "Microsoft YaHei", system-ui, sans-serif;
+            padding: 40px 20px;
         }
-        .logo {
-            max-width: 200px;
-            max-height: 200px;
+        .wrap {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #1A1A2E;
             margin-bottom: 24px;
         }
-        .text {
-            font-size: 18px;
-            color: #333333;
+        .version-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .info h3 {
+            color: #1A1A2E;
+            margin-bottom:6px;
+        }
+        .info p {
+            color:#555566;
+            font-size:14px;
+        }
+        .download-btn {
+            background:#8A5CF7;
+            color:white;
+            border:none;
+            padding:9px 20px;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:14px;
+        }
+        .download-btn:hover {
+            background:#794ce0;
         }
     </style>
 </head>
 <body>
-    <img src="logo.png" alt="Logo" class="logo">
-    <div class="text">简库资源网正在准备下载...</div>
-    <script>
-        setTimeout(function() {
-            window.location.href = "简库资源网.exe";
-        }, 2000);
-    </script>
+    <div class="wrap">
+        <h2>选择版本进行下载</h2>
+
+        <div class="version-card">
+            <div class="info">
+                <h3>预览版本 v1.0.0</h3>
+                <p>存在登入记录无法保存问题</p>
+            </div>
+            <button class="download-btn" onclick="jump_v1_0_0()">获取</button>
+        </div>
+
+        <div class="version-card">
+            <div class="info">
+                <h3>最新预览版本 v1.1.0</h3>
+                <p>解决了登入记录无法保存的问题，可能还有其他问题</p>
+            </div>
+            <button class="download-btn" onclick="jump_v1_1_0()">获取</button>
+        </div>
+    </div>
+
+<script>
+// 在这里修改你的实际下载链接
+function jump_v1_0_0(){
+    // v1.0.0 版本地址
+    window.open("v1.0.0.exe","_self");
+}
+function jump_v1_1_0(){
+    // v1.1.0 版本地址
+    window.open("v1.1.0.exe","_self");
+}
+</script>
 </body>
 </html>
